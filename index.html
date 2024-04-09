@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SkyCanvas</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -17,7 +18,7 @@
                 <div class="site-header-inner">
                     <div class="brand header-brand">
                         <h1 class="m-0">
-							<a href="#">
+							<a href="">
 								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
                             </a>
                         </h1>
@@ -31,9 +32,57 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Landing page</h1>
-	                        <p class="hero-paragraph">landing page description</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a class="button" href="#">Get in touch</a></div>
+                            <h1 class="hero-title mt-0"><span style="background: linear-gradient(to right, #212AFA, #00BFFB); -webkit-background-clip: text; color: transparent; font-size: 2em;">SkyCanvas</span> Perspective-Aware Aerial Imagery System</h1>
+	                        <p class="hero-paragraph">Innovative project by Purdue University to revolutionize aerial displays through advanced image processing and drone technology.</p>
+                            <div class="hero-cta" style="display: flex; align-items: center;">
+                                <a class="button button-primary" href="https://github.com/iPrakharV/SkyCanvas" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+                                    <i class="fa fa-github" style="color: #fff; font-size: 25px; vertical-align: middle;"></i>&nbsp;&nbsp;Github
+                                </a>
+                                <div class="get-in-touch" style="position: relative;">
+                                    <a class="button" href="#" style="display: inline-flex; align-items: center; justify-content: center; opacity: 1;">Get in touch</a>
+                                    <!-- <a class="button" href="#" style="display: inline-flex; align-items: center; justify-content: center; opacity: 1;" onmouseover="showOptions()" onmouseout="hideOptions(event)">Get in touch</a> -->
+                                    <!-- <div class="options" style="display: none; position: absolute; top: 100%; left: 0; background-color: transparent; border: 1px solid #ccc; padding: 5px;" onmouseover="cancelHideOptionsTimer()" onmouseout="startHideOptionsTimer()">
+                                        <a href="#" style="display: block; text-decoration: none; color: #000; padding: 5px;" onmouseover="showOptions()" onmouseout="hideOptions(event)">Option 1</a>
+                                        <a href="#" style="display: block; text-decoration: none; color: #000; padding: 5px;" onmouseover="showOptions()" onmouseout="hideOptions(event)">Option 2</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                            
+                            <script>
+                                let hideOptionsTimer;
+                            
+                                function showOptions() {
+                                    document.querySelector('.options').style.display = 'block';
+                                    document.querySelector('.button').style.opacity = '0.5'; // Set opacity to fade out
+                                }
+                            
+                                function hideOptions(event) {
+                                    if (!document.querySelector('.options').contains(event.relatedTarget)) {
+                                        startHideOptionsTimer();
+                                    }
+                                }
+                            
+                                function startHideOptionsTimer() {
+                                    hideOptionsTimer = setTimeout(function() {
+                                        document.querySelector('.options').style.display = 'none';
+                                        document.querySelector('.button').style.opacity = '1'; // Reset opacity
+                                    }, 1000); // Adjust the delay as needed (in milliseconds)
+                                }
+                            
+                                function cancelHideOptionsTimer() {
+                                    clearTimeout(hideOptionsTimer);
+                                }
+                            </script>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -63,8 +112,8 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-01.svg" alt="Feature 01">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Advanced Image Processing</h4>
+                                    <p class="text-sm mb-0">Develop cutting-edge algorithms for analyzing and segmenting uploaded images for precise drone portrayal.</p>
                                 </div>
                             </div>
 							<div class="feature text-center is-revealing">
@@ -72,8 +121,8 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-02.svg" alt="Feature 02">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">3D Spatial Mapping</h4>
+                                    <p class="text-sm mb-0">Integrates state-of-the-art 3D spatial mapping to accurately position drones in real-time, considering complex environmental variables for precision in aerial displays.</p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
@@ -81,8 +130,8 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-03.svg" alt="Feature 03">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Interactive Web Platform</h4>
+                                    <p class="text-sm mb-0">Build a Flask-based web interface for image uploads, display previews, and real-time viewing angle adjustments.</p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
@@ -90,8 +139,8 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-04.svg" alt="Feature 04">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Real-Time Adaptive Algorithms</h4>
+                                    <p class="text-sm mb-0">Employs adaptive algorithms that dynamically adjust drone positions and LED outputs based on live feedback, ensuring optimal display quality under varying conditions.</p>
                                 </div>
                             </div>
 							<div class="feature text-center is-revealing">
@@ -99,8 +148,9 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-05.svg" alt="Feature 05">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Automated Collision Avoidance</h4>
+                                    <p class="text-sm mb-0"> Features advanced collision avoidance systems, enabling drones to autonomously detect and evade potential collisions, ensuring the safety and integrity of the display.
+                                    </p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
@@ -108,8 +158,8 @@
                                     <div class="feature-icon">
 										<img src="dist/images/feature-icon-06.svg" alt="Feature 06">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">High-Resolution Display Capabilities</h4>
+                                    <p class="text-sm mb-0">Supports high-resolution aerial displays by coordinating large fleets of drones, each acting as a pixel, to create complex and detailed images.</p>
                                 </div>
                             </div>
                         </div>
@@ -121,35 +171,30 @@
                 <div class="container-sm">
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
-                            <h2 class="section-title mt-0">Unlimited for all</h2>
-                            <p class="section-paragraph mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad quis nostrud.</p>
+                            <h2 class="section-title mt-0">Timeline</h2>
+                            <p class="section-paragraph mb-0">This estimate is approximate and subject to change pending finalization of the project specifications.</p>
                         </div>
-						<div class="pricing-tables-wrap">
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner is-revealing">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">49</span><span class="text-xs">/month</span></div>
-                                        </div>
-										<div class="pricing-table-features-title text-xs pt-24 pb-24">What you will get</div>
-                                        <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-                                            <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
-                                            </li>
-											<li>
-												<span>Lorem ipsum dolor sit nisi</span>
-											</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#">Pre order now</a>
-                                    </div>
+					<div class="pricing-tables-wrap">
+                        <div class="pricing-table">
+                            <div class="pricing-table-inner is-revealing">
+                                <div class="pricing-table-main">
+									<ul class="pricing-table-features list-reset text-xs">
+										<li>
+											<span>Weeks 1-3: Algorithm development for image segmentation and drone coordination, with an emphasis on viewing angle adjustments.</span>
+										</li>
+										<li>
+											<span>Weeks 2-4: Development of the Flask web application.</span>
+										</li>
+										<li>
+											<span>Weeks 4-6: Simulation testing, incorporating viewing angle adjustments.</span>
+										</li>
+										<li>
+											<span>Weeks 6-8: Controlled live tests to refine system functionality.</span>
+										</li>
+										<li>
+											<span>Weeks 9: Final system implementation and full-scale demonstration.</span>
+										</li>
+									</ul>
                                 </div>
                             </div>
                         </div>
@@ -160,9 +205,11 @@
 			<section class="cta section">
 				<div class="container">
 					<div class="cta-inner section-inner">
-						<h3 class="section-title mt-0">Still not convinced?</h3>
+						<h3 class="section-title mt-0">Want to see our code!</h3>
 						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="#">Get in touch</a>
+							<a class="button button-primary button-wide-mobile" href="https://github.com/iPrakharV/SkyCanvas" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+								<i class="fa fa-github" style="color: #fff; font-size: 25px; vertical-align: middle;"></i>&nbsp;&nbsp;Github
+							</a>
 						</div>
 					</div>
 				</div>
